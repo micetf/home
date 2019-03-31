@@ -1,5 +1,5 @@
-import friends from "./config/friends";
-import tools from "./config/tools";
+import friends from "./friends";
+import tools from "./tools";
 export const domaines = [
     {
         name: "maths",

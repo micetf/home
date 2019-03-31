@@ -1,5 +1,5 @@
 import * as thumbnail from "./thumbnails.js";
-console.log(thumbnail);
+
 export const byId = {
     abaque: {
         id: "abaque",
@@ -1964,7 +1964,6 @@ Le jeu est multijoueurs et peut donner lieu à un défi en ligne entre élèves 
 };
 export const allIds = Object.keys(byId);
 
-console.log(allIds.length);
 
 export default {
     byId,

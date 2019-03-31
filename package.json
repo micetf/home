@@ -4,6 +4,7 @@
     "private": true,
     "dependencies": {
         "@neos21/bootstrap3-glyphicons": "^1.0.2",
+        "axios": "^0.18.0",
         "bootstrap": "^4.3.1",
         "node-sass": "^4.11.0",
         "react": "^16.8.3",
