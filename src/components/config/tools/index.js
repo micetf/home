@@ -407,13 +407,7 @@ export const byId = {
         url: "concatenator",
         description: `Cet outil permet de fusionner des images. L'ajout d'une image peut se faire au-dessus, au-dessous, à gauche ou à droite des précédentes. Les formats d'images acceptés sont le jpg et le png.`,
         thumbnail: thumbnail._CONCATENATOR,
-        keywords: [
-            "image",
-            "fusion",
-            "concaténer",
-            "générateur",
-            "divers",
-        ],
+        keywords: ["image", "fusion", "concaténer", "générateur", "divers"],
     },
     conjugaison: {
         id: "conjugaison",
@@ -830,6 +824,24 @@ export const byId = {
             "graduée",
         ],
     },
+    grid4bot: {
+        id: "grid4bot",
+        title: "Grid4bot",
+        url: "grid4bot",
+        description: `Générateur de grilles permettant de proposer des situations pour la programmation de robots.`,
+        thumbnail: thumbnail._GRID4BOT,
+        keywords: [
+            "robot",
+            "maths",
+            "mathématiques",
+            "programmation",
+            "code",
+            "bluebot",
+            "beebot",
+            "quadrillage",
+            "générateur",
+        ],
+    },
     groupements: {
         id: "groupements",
         title: "Groupements",
@@ -987,6 +999,22 @@ export const byId = {
             "mathématiques",
             "mesure",
             "temps",
+            "générateur",
+        ],
+    },
+    littleChallengeBook: {
+        id: "littleChallengeBook",
+        title: "Little Challenge Book (Générateur)",
+        url: "littleChallengeBook",
+        description: `Cet outil est un complément de l'application Grid4Bot. A partir des images créées par cette application, Little Challenge Book permet de générer un petit livre A4 au format pdf.`,
+        thumbnail: thumbnail._LITTLE_CHALLENGE_BOOK,
+        keywords: [
+            "programmation",
+            "bluebot",
+            "maths",
+            "mathématiques",
+            "livre",
+            "a4",
             "générateur",
         ],
     },
@@ -1963,7 +1991,6 @@ Le jeu est multijoueurs et peut donner lieu à un défi en ligne entre élèves 
     },
 };
 export const allIds = Object.keys(byId);
-
 
 export default {
     byId,
