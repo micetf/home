@@ -1,6 +1,6 @@
 import React from "react";
 
-import { domaines } from "../config";
+import { domaines } from "../../data";
 import LinkDomaine from "./LinkDomaine";
 import LinkDomaineActif from "./LinkDomaineActif";
 
