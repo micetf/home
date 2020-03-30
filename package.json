@@ -3,13 +3,15 @@
     "version": "0.2.2",
     "private": true,
     "dependencies": {
-        "@neos21/bootstrap3-glyphicons": "^1.0.2",
-        "axios": "^0.18.0",
         "bootstrap": "^4.3.1",
-        "node-sass": "^4.11.0",
-        "react": "^16.8.3",
-        "react-dom": "^16.8.3",
-        "react-scripts": "2.1.5"
+        "jquery": "^3.4.0",
+        "lazysizes": "^4.1.7",
+        "node-pre-gyp": "^0.12.0",
+        "popper.js": "^1.15.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-scripts": "^2.1.8",
+        "typescript": "^3.4.3"
     },
     "scripts": {
         "start": "react-scripts start",

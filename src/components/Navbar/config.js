@@ -47,3 +47,8 @@ export const menu = [
         link: "Contact",
     },
 ];
+
+export const fm = {
+    href: email,
+    title: "Pour contacter le webmaster...",
+};
