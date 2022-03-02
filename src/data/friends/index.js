@@ -27,7 +27,7 @@ export const byId = {
     lakanal: {
         id: "lakanal",
         title: "Lakanal",
-        url: "https://lakanal.net/",
+        url: "http://lakanal.net/",
         description:
             "lakanal.net : site international de quartier. Ressources et outils pour le cycle 2 : GS - CP - CE1. Enseignant (suivant les années) en CP / CE1 / CE2 )",
         thumbnail: thumbnail._LAKANAL,
@@ -43,7 +43,7 @@ export const byId = {
     soutien67: {
         id: "soutien67",
         title: "Soutien67",
-        url: "https://soutien67.fr/",
+        url: "http://soutien67.fr/",
         description: `Soutien scolaire gratuit - Ressources pour l'école élémentaire - Activités en ligne - Cours en ligne - Fiches imprimables.  Niveaux : CP - CE1 - CE2 - CM1 - CM2. Domaines : Mathématiques - Français - Histoire - Géographie - Sciences`,
         thumbnail: thumbnail._SOUTIEN,
     },
@@ -58,7 +58,7 @@ export const byId = {
     monecole: {
         id: "monecole",
         title: "Mon école",
-        url: "https://www.monecole.fr/",
+        url: "https://monecole.fr/",
         description:
             "Mon école | Plateforme pédagogique pour l'enseignant et ses élèves",
         thumbnail: thumbnail._MONECOLE,
@@ -71,14 +71,14 @@ export const byId = {
             "Vous trouverez sur ce site de nombreuses ressources pour l'école primaire.  : des leçons de grammaire, orthographe, conjugaison, accompagnées de matériels didatiques, Des logiciels simples de manipulation pour travailler des compétences en calcul mental, pour l'apprentissage des tables... La plupart d'entre eux permettent aussi de générer des exercices imprimables, ...",
         thumbnail: thumbnail._SCALPA,
     },
-    chezmarco: {
-        id: "chezmarco",
-        title: "Chez Marco",
-        url: "https://md87.ouvaton.org/",
-        description:
-            "Chez Marco - Outils pour le CP avec aussi de vrais morceaux de numérique...",
-        thumbnail: thumbnail._CHEZMARCO,
-    },
+    // chezmarco: {
+    //     id: "chezmarco",
+    //     title: "Chez Marco",
+    //     url: "https://md87.ouvaton.org/",
+    //     description:
+    //         "Chez Marco - Outils pour le CP avec aussi de vrais morceaux de numérique...",
+    //     thumbnail: thumbnail._CHEZMARCO,
+    // },
     lespareils: {
         id: "lespareils",
         title: "Les petits dictionnaires des pareils",

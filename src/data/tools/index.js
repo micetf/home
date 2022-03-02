@@ -979,6 +979,22 @@ export const byId = {
         thumbnail: thumbnail._LE_BON_MOT,
         keywords: ["mot", "jeu", "français", "vocabulaire"],
     },
+    LectureFlash: {
+        id: "LectureFlash",
+        title: "Lecture flash",
+        url: "lecture-flash",
+        description: `Application permettant de travailler la fluence de lecture. On colle son texte et les mots disparaissent à la vitesse désirée. Intérêts : limiter le nombre de régressions inutiles, favoriser l'anticipation, améliorer la vitesse de lecture et la motivation. (sur une idée de Julie Meunier : @ptitejulie89)`,
+        thumbnail: thumbnail._LECTURE_FLASH,
+        keywords: [
+            "lecture",
+            "flash",
+            "fluence",
+            "français",
+            "régression",
+            "anticipation",
+            "prompteur",
+        ],
+    },
     LectureHeure: {
         id: "LectureHeure",
         title: "Lecture de l'heure",
