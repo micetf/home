@@ -2,10 +2,10 @@ import React from "react";
 
 export default ({ label, name }) => {
     return (
-        <li className="page-item active" key={name} aria-current="page">
-            <span className="page-link">
+        <li className="nav-item" key={name} aria-current="page">
+            <span className="nav-link  active">
                 {label}
-                <span className="sr-only">(current)</span>
+                <span className="visually-hidden">(current)</span>
             </span>
         </li>
     );

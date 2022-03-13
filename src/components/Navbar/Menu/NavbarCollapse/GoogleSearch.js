@@ -5,13 +5,13 @@ const cx = "partner-pub-3083664774752222:3949962842";
 
 const renderInputText = () => (
     <input
-        className="form-control mr-sm-2"
+        className="form-control"
         type="text"
         id="q"
         name="q"
         title="Recherche"
         alt="Recherche"
-        placeholder="Recherche"
+        placeholder="Recherche sur le web"
         maxLength="256"
     />
 );
@@ -20,22 +20,27 @@ const renderInputHidden = () => (
 );
 
 const renderButtonSubmit = () => (
-    <div>
-        <button
-            className="btn btn-outline-success my-2 my-sm-0"
-            type="submit"
-            id="searchSubmit"
-            name="submit"
-            alt="Chercher"
-            title="Soumettre la recherche"
+    <button
+        className="btn btn-outline-secondary"
+        type="submit"
+        id="searchSubmit"
+        name="submit"
+        alt="Chercher"
+        title="Soumettre la recherche"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            height="1em"
+            fill="#f8f9fa"
         >
-            Chercher
-        </button>
-    </div>
+            <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+        </svg>
+    </button>
 );
 export default () => (
     <form
-        className="form-inline my-2 my-lg-0"
+        className="d-flex"
         method="get"
         title="Formulaire de recherche"
         action={action}

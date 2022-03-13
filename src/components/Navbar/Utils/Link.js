@@ -1,9 +1,13 @@
 import React from "react";
 
-export default props => (
+export default (props) => (
     <a {...props}>
         {" "}
         {props.link}{" "}
-        {props.current ? <span className="sr-only"> (current) </span> : ""}{" "}
+        {props.current ? (
+            <span className="visually-hidden"> (current) </span>
+        ) : (
+            ""
+        )}{" "}
     </a>
 );

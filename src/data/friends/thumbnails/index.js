@@ -20,7 +20,7 @@
 
 import _2a7 from "./2a7.gif";
 import _LesPareils from "./LesPareils.jpg";
-import _OutilsTICE from "./OutilsTICE.png";
+import _OutilsTICE from "./LesOutilsTICE.png";
 import _apinc from "./apinc.png";
 import _astro52 from "./astro52.jpg";
 import _cartable from "./cartable.jpg";
@@ -35,7 +35,7 @@ import _lasourisweb from "./lasourisweb.jpg";
 import _logicieleducatif from "./logicieleducatif.jpg";
 import _maclasseweb from "./maclasseweb.jpg";
 import _mathannuaire from "./mathannuaire.png";
-import _monecole from "./monecole.svg";
+import _monecole from "./monecole.png";
 import _moustache from "./moustache.jpg";
 import _planete from "./planete.gif";
 import _potati from "./potati.png";

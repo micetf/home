@@ -7,8 +7,8 @@ const renderLink = (item, id) => (
     </li>
 );
 
-const renderLinks = items => items.map(renderLink);
+const renderLinks = (items) => items.map(renderLink);
 
 export default ({ links }) => (
-    <ul className="navbar-nav mr-auto"> {renderLinks(links)} </ul>
+    <ul className="navbar-nav ms-auto"> {renderLinks(links)} </ul>
 );

@@ -13,8 +13,8 @@ const renderDomainesList = ({ name, showdomaine }) =>
         )
     );
 
-export default props => (
-    <ul className="pagination pagination-sm justify-content-center">
+export default (props) => (
+    <ul className="nav nav-pills nav-fill mb-2 border border-3">
         {renderDomainesList(props)}
     </ul>
 );

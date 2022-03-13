@@ -16,35 +16,11 @@ export const brand = {
 
 export const menu = [
     {
-        className: "nav-link",
-        href: "https://micetf.fr/outils/",
-        title: "Recherche sur le site par mots clés",
-        link: "Chercher un outil",
-    },
-    {
-        className: "nav-link",
-        href: "https://micetf.fr/index/",
-        title: "Liste des outils rangés par ordre alphabétique",
-        link: "Liste des outils",
-    },
-    {
-        className: "nav-link",
+        className: "btn btn-outline-secondary my-1 mx-1",
         href: "https://micetf.fr/blog/",
         target: "_blank",
+        title: "Accéder au blog",
         link: "Blog",
-    },
-    {
-        className: "nav-link",
-        href: "https://www.youtube.com/user/MiCetF/videos",
-        target: "_blank",
-        title: "Chaîne Youtube",
-        link: "Vidéos",
-    },
-    {
-        className: "nav-link",
-        href: email,
-        title: "Pour contacter le webmaster...",
-        link: "Contact",
     },
 ];
 
