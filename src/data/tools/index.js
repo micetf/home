@@ -1372,7 +1372,7 @@ export const byId = {
     },
     ordonombres: {
         id: "ordonombres",
-        title: "Ordonner des nombres",
+        title: "Ordo'Nombres",
         url: "ordonombres",
         description: `Application web permettant aux élèves de s'entraîner/évaluer au classement des nombres dans l'ordre croissant/décroissant.`,
         thumbnail: thumbnail._ORDONOMBRES,
