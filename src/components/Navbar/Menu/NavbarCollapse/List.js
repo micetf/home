@@ -12,7 +12,7 @@ export default ({ path = "https://micetf.fr" }) => {
     return (
         <button
             className="btn btn-secondary my-1 mx-1"
-            title="Liste de outils rangés par ordre alphavétique..."
+            title="Liste de outils rangés par ordre alphabétique..."
             onClick={handleClick}
         >
             <svg
