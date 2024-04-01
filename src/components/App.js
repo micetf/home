@@ -24,7 +24,7 @@ export default () => {
                 <Pagination name={domaine} showdomaine={setDomaine} />
                 <Cards cards={cards} />
                 <About />
-                <ScrollButton scrollStepInPx="500" delayInMs="20" />
+                <ScrollButton scrollStepInPx="1000" delayInMs="5" />
             </div>
         </>
     );
