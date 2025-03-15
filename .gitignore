@@ -1,24 +1,59 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# Testing
 /coverage
+/cypress/videos
+/cypress/screenshots
 
-# production
-/dist
+# Production build
+/dist/
+/build/
+/out/
+/.next/
 
-# misc
-.DS_Store
+# Assets générés
+/public/thumbnails/
+/public/assets/
+/public/media/
+/assets/thumbnails/
+
+# Environnement
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env*.local
 
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-vscode.code-workspace
+pnpm-debug.log*
+logs
+*.log
+
+# Éditeurs de code
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.code-workspace
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Icon?
