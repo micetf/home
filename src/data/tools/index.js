@@ -525,7 +525,7 @@ export const byId = {
         id: "Denombrement",
         title: "Dénombrement",
         url: "Denombrement",
-        description: `Application web permettant de travailler les écritures et les représentations des nombres décimaux.`,
+        description: `Application web permettant de s'exercer au dénombrement de petites quantités.`,
         thumbnail: thumbnail._DENOMBREMENT,
         keywords: [
             "dénombrement",

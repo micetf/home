@@ -15,13 +15,13 @@ export const brand = {
 };
 
 export const menu = [
-    {
-        className: "btn btn-outline-secondary my-1 mx-1",
-        href: "https://micetf.fr/blog/",
-        target: "_blank",
-        title: "Accéder au blog",
-        link: "Blog",
-    },
+    // {
+    //     className: "btn btn-outline-secondary my-1 mx-1",
+    //     href: "https://micetf.fr/blog/",
+    //     target: "_blank",
+    //     title: "Accéder au blog",
+    //     link: "Blog",
+    // },
 ];
 
 export const fm = {

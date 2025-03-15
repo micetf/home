@@ -1,9 +1,8 @@
 {
     "private": true,
-    "name": "estimheure",
+    "name": "micetf",
     "version": "1.0.0",
     "main": "index.js",
-    "repository": "https://github.com/micetf/estimheure.git",
     "author": "Frédéric MISERY <webmaster@micetf.fr> (https://micetf.fr/)",
     "license": "MIT",
     "scripts": {
