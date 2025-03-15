@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin"); // Ajoutez cette ligne
 
 const mode =
     process.env.NODE_ENV === "production" ? "production" : "development";
@@ -8,9 +9,9 @@ const mode =
 module.exports = {
     mode,
     output: {
-        filename: "home/js/[name].js",
+        filename: "js/[name].js",
         path: path.resolve(__dirname, "dist"),
-        assetModuleFilename: "home/img/[name][ext]",
+        assetModuleFilename: "thumbnails/[name][ext]", // Ce paramètre affecte seulement les assets importés directement
         clean: true,
     },
 
@@ -68,15 +69,31 @@ module.exports = {
         ],
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: "./home/css/[name].css" }),
+        new MiniCssExtractPlugin({ filename: "./css/[name].css" }),
         new HtmlWebpackPlugin({
             template: "./public/index.html",
             favicon: "./public/favicon.ico",
         }),
+        // Ajoutez ce plugin pour copier les thumbnails
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: "public/thumbnails",
+                    to: "thumbnails",
+                },
+            ],
+        }),
     ],
     devtool: "source-map",
     devServer: {
-        static: "./dist",
+        static: [
+            {
+                directory: path.join(__dirname, "dist"),
+            },
+            {
+                directory: path.join(__dirname, "public"),
+            },
+        ],
         hot: true,
     },
 };

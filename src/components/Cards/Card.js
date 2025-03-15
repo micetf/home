@@ -6,7 +6,7 @@ export default ({ title, url, description, thumbnail }) => {
     const body = { title, url, description };
     // Utiliser getFullThumbnailPath pour obtenir l'URL complète de l'image
     const imgSrc = getFullThumbnailPath(thumbnail);
-
+    console.log(imgSrc);
     return (
         <div className="col-xs-12 col-sm-6 col-md-4 col-xl-4 mb-3">
             <div className="card border border-dark">
