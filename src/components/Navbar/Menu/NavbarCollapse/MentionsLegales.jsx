@@ -1,16 +1,15 @@
 import React from "react";
-export default ({ path = "https://micetf.fr" }) => {
-    const a = document.createElement("a");
-    a.target = "_blank";
-    a.href = `${path}/mentions-legales`;
+import PropTypes from "prop-types";
+
+function MentionsLegales({ path = "https://micetf.fr" }) {
     const handleClick = (e) => {
         e.preventDefault();
-        a.click();
+        window.open(`${path}/mentions-legales`, "_blank");
     };
 
     return (
         <button
-            className="btn btn-primary my-2 mx-2"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-2 my-2 mx-2 rounded"
             title="Mentions légales"
             onClick={handleClick}
         >
@@ -18,10 +17,16 @@ export default ({ path = "https://micetf.fr" }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 height="1em"
-                fill="#f8f9fa"
+                className="fill-current"
             >
                 <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
             </svg>
         </button>
     );
+}
+
+MentionsLegales.propTypes = {
+    path: PropTypes.string,
 };
+
+export default MentionsLegales;
