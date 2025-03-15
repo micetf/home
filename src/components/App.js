@@ -4,12 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import "lazysizes";
 // import "lazysizes/plugins/parent-fit/ls.parent-fit";
 
+import { outils, amis } from "micetf-data";
 import "../style.css";
 import Navbar from "./Navbar";
 import Pagination from "./Pagination";
 import Cards from "./Cards";
 import ScrollButton from "./ScrollButton";
-import { outils, amis } from "../data";
 import About from "./About";
 
 export default () => {

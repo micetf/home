@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-const renderList = cards =>
+const renderList = (cards) =>
     cards.map((card, index) => <Card key={index} {...card} />);
 
 const Cards = ({ cards }) => (
