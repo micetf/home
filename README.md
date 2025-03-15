@@ -1,68 +1,121 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MiCetF - Site Principal
 
-## Available Scripts
+Ce dépôt contient le code source du site principal de MiCetF, une collection d'outils pédagogiques pour l'école primaire.
 
-In the project directory, you can run:
+## Fonctionnalités
 
-### `npm start`
+-   Présentation de tous les outils disponibles sur MiCetF
+-   Filtrage des outils par domaine (mathématiques, français, etc.)
+-   Présentation des sites amis
+-   Interface responsive adaptée à tous les appareils
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Prérequis
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+-   Node.js (version 14 ou supérieure)
+-   npm ou yarn
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clonez ce dépôt
 
-### `npm run build`
+```bash
+git clone https://github.com/micetf/home.git
+cd home
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Installez les dépendances
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```bash
+npm install
+# ou
+yarn
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Démarrez le serveur de développement
 
-### `npm run eject`
+```bash
+npm start
+# ou
+yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Architecture du projet
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ce projet utilise une architecture modulaire où les données (liste des outils, thumbnails, etc.) sont centralisées dans un package séparé appelé `micetf-data`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   **micetf-data** : Contient la liste des outils, des sites amis et les thumbnails
+-   **home** (ce dépôt) : Site principal qui présente les outils
+-   **outils** : Outil de recherche pour filtrer les outils par mot-clé
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Comment ajouter un nouvel outil
 
-## Learn More
+L'ajout d'un nouvel outil se fait entièrement dans le package `micetf-data`. Voici la démarche à suivre :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. Préparer la thumbnail
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Créez une capture d'écran de l'outil (taille recommandée : 300x200px)
+2. Enregistrez l'image au format PNG
+3. Nommez l'image de manière descriptive (ex: `mon-nouvel-outil.png`)
+4. Placez l'image dans le dossier `assets/thumbnails` du dépôt `micetf-data`
 
-### Code Splitting
+### 2. Ajouter l'outil à la liste
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+1. Ouvrez le fichier `src/data/tools.js` du dépôt `micetf-data`
+2. Ajoutez un nouvel objet à la liste des outils en suivant ce modèle :
 
-### Analyzing the Bundle Size
+```javascript
+{
+    id: "mon-nouvel-outil", // identifiant unique, généralement l'URL de l'outil
+    title: "Mon Nouvel Outil", // titre affiché sur le site
+    url: "mon-nouvel-outil", // URL de l'outil (sans le domaine)
+    description: "Description détaillée de l'outil et de son utilité pédagogique.",
+    thumbnail: "mon-nouvel-outil.png", // nom du fichier image
+    keywords: ["maths", "géométrie", "cycle 3"], // mots-clés pour le filtrage
+},
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### 3. Mettre à jour la version du package
 
-### Making a Progressive Web App
+1. Mettez à jour le numéro de version dans `package.json` du dépôt `micetf-data`
+2. Committez et poussez vos modifications
+3. Créez un tag pour la nouvelle version
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```bash
+git tag v1.0.X
+git push origin v1.0.X
+```
 
-### Advanced Configuration
+### 4. Mettre à jour la dépendance dans les projets
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Dans les projets `home` et `outils`, mettez à jour la dépendance vers `micetf-data` :
 
-### Deployment
+```bash
+npm install github:micetf/micetf-data#v1.0.X
+# ou
+yarn add github:micetf/micetf-data#v1.0.X
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### 5. Tester et déployer
 
-### `npm run build` fails to minify
+1. Testez que le nouvel outil apparaît correctement dans les deux projets
+2. Déployez les mises à jour
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Développement
+
+-   `npm start` : Lance le serveur de développement
+-   `npm run build` : Génère une version de production
+-   `npm run prebuild` : Copie les thumbnails depuis micetf-data (exécuté automatiquement avant build)
+
+## Notes importantes
+
+-   Ne modifiez jamais directement les fichiers dans `public/thumbnails` - ils sont générés automatiquement
+-   Le dossier `dist` est ignoré par Git et ne doit pas être commité
+-   Toute modification de la liste des outils doit être faite dans `micetf-data` pour maintenir la cohérence entre les projets
+
+## Licence
+
+MIT
+
+## Contact
+
+Pour toute question concernant ce projet, contactez [webmaster@micetf.fr](mailto:webmaster@micetf.fr)
