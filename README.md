@@ -1,29 +1,40 @@
-# MiCetF - Site Principal
+# MiCetF
 
-Ce dépôt contient le code source du site principal de MiCetF, une collection d'outils pédagogiques pour l'école primaire.
+MiCetF est une collection d'outils pédagogiques pour l'école primaire développée par Frédéric MISERY.
 
-## Fonctionnalités
+## 🎯 Présentation
 
--   Présentation de tous les outils disponibles sur MiCetF
--   Filtrage des outils par domaine (mathématiques, français, etc.)
--   Présentation des sites amis
--   Interface responsive adaptée à tous les appareils
+Ce dépôt contient le code source du site principal de MiCetF, une plateforme qui propose de nombreux outils pédagogiques destinés principalement aux enseignants et élèves de l'école primaire.
 
-## Prérequis
+### Fonctionnalités
 
--   Node.js (version 14 ou supérieure)
+-   📚 Présentation des outils pédagogiques organisés par domaines :
+    -   Mathématiques
+    -   Français
+    -   Générateurs
+    -   Divers
+    -   Sites amis
+-   🔍 Filtrage des outils par domaine
+-   📱 Interface responsive adaptée à tous types d'appareils
+-   🌐 Intégration avec les sites amis et partenaires
+
+## 🚀 Installation
+
+### Prérequis
+
+-   Node.js (version 16 ou supérieure)
 -   npm ou yarn
 
-## Installation
+### Étapes d'installation
 
-1. Clonez ce dépôt
+1. Clonez ce dépôt :
 
 ```bash
 git clone https://github.com/micetf/home.git
 cd home
 ```
 
-2. Installez les dépendances
+2. Installez les dépendances :
 
 ```bash
 npm install
@@ -31,23 +42,53 @@ npm install
 yarn
 ```
 
-3. Démarrez le serveur de développement
+3. Démarrez le serveur de développement :
 
 ```bash
-npm start
+npm run dev
 # ou
-yarn start
+yarn dev
 ```
 
-## Architecture du projet
+L'application sera accessible à l'adresse [http://localhost:5173](http://localhost:5173).
+
+## 🏗️ Architecture du projet
 
 Ce projet utilise une architecture modulaire où les données (liste des outils, thumbnails, etc.) sont centralisées dans un package séparé appelé `micetf-data`.
 
--   **micetf-data** : Contient la liste des outils, des sites amis et les thumbnails
--   **home** (ce dépôt) : Site principal qui présente les outils
--   **outils** : Outil de recherche pour filtrer les outils par mot-clé
+### Structure principale
 
-## Comment ajouter un nouvel outil
+-   **micetf-data** : Package contenant la liste des outils, des sites amis et les thumbnails
+-   **home** (ce dépôt) : Site principal qui présente les outils
+-   **outils** : Outil de recherche avancé pour filtrer les outils par mot-clé
+
+### Stack technique
+
+-   **React** : Bibliothèque UI pour le développement de composants
+-   **Tailwind CSS** : Framework CSS utility-first pour le design
+-   **Vite** : Outil de build moderne pour une expérience de développement optimale
+
+## 🧩 Structure des fichiers
+
+```
+micetf/
+├── public/              # Fichiers statiques
+│   ├── thumbnails/      # Images des outils (générées automatiquement)
+│   └── index.html       # Page HTML principale
+├── src/
+│   ├── components/      # Composants React
+│   │   ├── About/       # Informations sur le projet
+│   │   ├── Cards/       # Affichage des cartes d'outils
+│   │   ├── Navbar/      # Barre de navigation
+│   │   ├── Pagination/  # Navigation entre les domaines
+│   │   └── App.jsx      # Composant principal
+│   ├── data/            # Données centralisées (via micetf-data)
+│   ├── index.css        # Styles globaux
+│   └── main.jsx         # Point d'entrée de l'application
+└── package.json         # Dépendances et scripts
+```
+
+## 🛠️ Comment ajouter un nouvel outil
 
 L'ajout d'un nouvel outil se fait entièrement dans le package `micetf-data`. Voici la démarche à suivre :
 
@@ -95,27 +136,33 @@ npm install github:micetf/micetf-data#v1.0.X
 yarn add github:micetf/micetf-data#v1.0.X
 ```
 
-### 5. Tester et déployer
+## 🔄 Gestion des données
 
-1. Testez que le nouvel outil apparaît correctement dans les deux projets
-2. Déployez les mises à jour
+Les données utilisées par l'application sont centralisées dans le package `micetf-data`, qui fournit :
 
-## Développement
+-   La liste des outils (`tools.js`)
+-   Les domaines (`domaines.js`)
+-   Les sites amis (`friends.js`)
+-   Les miniatures des outils (`assets/thumbnails/`)
 
--   `npm start` : Lance le serveur de développement
+Cette architecture permet de maintenir les données cohérentes entre les différents projets de l'écosystème MiCetF.
+
+## 📋 Scripts disponibles
+
+-   `npm run dev` : Lance le serveur de développement
 -   `npm run build` : Génère une version de production
--   `npm run prebuild` : Copie les thumbnails depuis micetf-data (exécuté automatiquement avant build)
+-   `npm run preview` : Prévisualise la version de production
 
-## Notes importantes
+## 📝 Notes importantes
 
 -   Ne modifiez jamais directement les fichiers dans `public/thumbnails` - ils sont générés automatiquement
 -   Le dossier `dist` est ignoré par Git et ne doit pas être commité
 -   Toute modification de la liste des outils doit être faite dans `micetf-data` pour maintenir la cohérence entre les projets
 
-## Licence
+## 📄 Licence
 
 MIT
 
-## Contact
+## 📧 Contact
 
 Pour toute question concernant ce projet, contactez [webmaster@micetf.fr](mailto:webmaster@micetf.fr)
