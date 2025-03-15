@@ -862,7 +862,7 @@ merge2@^1.3.0:
 
 "micetf-data@github:micetf/micetf-data":
   version "1.0.0"
-  resolved "git+ssh://git@github.com/micetf/micetf-data.git#482b64addbf84699bad8b3274886569c99a099e6"
+  resolved "git+ssh://git@github.com/micetf/micetf-data.git#429d25d322e42c2bcfcbcf62d70572964237b046"
 
 micromatch@^4.0.5, micromatch@^4.0.8:
   version "4.0.8"
