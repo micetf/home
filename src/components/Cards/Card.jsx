@@ -5,8 +5,19 @@ import CardBody from "./CardBody";
 
 function Card({ title, url, description, thumbnail }) {
     const body = { title, url, description };
-    const imgSrc = getFullThumbnailPath(thumbnail);
-    console.log(imgSrc);
+
+    // Récupérer le chemin de base depuis micetf-data
+    let imgSrc = getFullThumbnailPath(thumbnail);
+
+    // Appliquer le préfixe de manière plus robuste
+    if (window.THUMBNAILS_PREFIX && window.THUMBNAILS_PREFIX !== ".") {
+        // Utiliser un chemin absolu avec le préfixe 'home'
+        // Remplace complètement './thumbnails/' par '/home/thumbnails/'
+        imgSrc = imgSrc.replace(
+            "./thumbnails/",
+            `/${window.THUMBNAILS_PREFIX}/thumbnails/`
+        );
+    }
 
     return (
         <div className="mb-3">
