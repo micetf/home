@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar";
-import Pagination from "./Pagination";
-import Cards from "./Cards";
-import ScrollButton from "./ScrollButton";
-import About from "./About";
+import Navbar from "./components/Navbar";
+import NavbarSpacer from "./components/Navbar/NavbarSpacer";
+import Pagination from "./components/Pagination";
+import Cards from "./components/Cards";
+import ScrollButton from "./components/ScrollButton";
+import About from "./components/About";
 import { outils, amis, THUMBNAIL_PATH } from "micetf-data";
 
 // Variable globale pour préfixer le chemin des thumbnails
 // Note: En production, cette valeur sera 'home' (sans ./ ni /)
 window.THUMBNAILS_PREFIX = import.meta.env.VITE_THUMBNAILS_PREFIX || ".";
 
+/**
+ * Composant principal de la page d'accueil
+ * Affiche les cartes d'outils selon le domaine sélectionné
+ * @returns {JSX.Element} Composant App
+ */
 function App() {
     const [domaine, setDomaine] = useState("maths");
 
@@ -110,8 +116,9 @@ function App() {
 
     return (
         <>
-            <Navbar />
-            <div className="container mx-auto px-4">
+            <Navbar pageTitle="Accueil" />
+            <NavbarSpacer />
+            <div className="container mx-auto px-4 pt-4">
                 <Pagination name={domaine} showDomaine={setDomaine} />
                 <Cards cards={cards} />
                 <About />

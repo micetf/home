@@ -1,5 +1,4 @@
 import React from "react";
-import { fm } from "../Navbar/config";
 
 function About() {
     return (
@@ -7,7 +6,10 @@ function About() {
             <div className="space-y-2">
                 <p>
                     <strong className="font-bold">Webmaster : </strong>
-                    <a {...fm} className="text-blue-600 hover:text-blue-800">
+                    <a
+                        href="mailto:webmaster@micetf.fr"
+                        className="text-blue-600 hover:text-blue-800"
+                    >
                         Frédéric.MISERY
                     </a>
                 </p>
