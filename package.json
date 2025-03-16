@@ -11,7 +11,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "micetf-data": "github:micetf/micetf-data",
+        "micetf-data": "github:micetf/micetf-data#v1.0.10",
         "prop-types": "latest",
         "react": "18.2.0",
         "react-dom": "18.2.0",
