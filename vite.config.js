@@ -18,18 +18,16 @@ export default defineConfig(({ mode }) => {
             },
         },
 
-        // Définir une variable d'environnement pour le préfixe des thumbnails
-        // Important: on utilise 'home' sans point ni slash
-        define: {
-            "import.meta.env.VITE_THUMBNAILS_PREFIX": JSON.stringify(
-                isProd ? "home" : "."
-            ),
+        // Optimiser l'importation du package data
+        optimizeDeps: {
+            include: ["packages-data"],
         },
 
         build: {
             outDir: "dist",
             assetsDir: "assets",
         },
+
         server: {
             port: 3000,
             open: true,

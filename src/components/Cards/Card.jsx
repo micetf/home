@@ -1,23 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { getFullThumbnailPath } from "micetf-data";
+import { getThumbnailUrl } from "micetf-data";
 import CardBody from "./CardBody";
 
 function Card({ title, url, description, thumbnail }) {
     const body = { title, url, description };
 
-    // Récupérer le chemin de base depuis micetf-data
-    let imgSrc = getFullThumbnailPath(thumbnail);
-
-    // Appliquer le préfixe de manière plus robuste
-    if (window.THUMBNAILS_PREFIX && window.THUMBNAILS_PREFIX !== ".") {
-        // Utiliser un chemin absolu avec le préfixe 'home'
-        // Remplace complètement './thumbnails/' par '/home/thumbnails/'
-        imgSrc = imgSrc.replace(
-            "./thumbnails/",
-            `/${window.THUMBNAILS_PREFIX}/thumbnails/`
-        );
-    }
+    // Récupérer l'URL de la miniature via la fonction du package data
+    const imgSrc = getThumbnailUrl(thumbnail);
 
     return (
         <div className="mb-3">
